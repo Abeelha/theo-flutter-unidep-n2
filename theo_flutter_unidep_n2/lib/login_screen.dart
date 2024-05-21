@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryColor,
+      backgroundColor: color1,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -39,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: _usernameController,
                 decoration: InputDecoration(
                   labelText: 'Nome de Usuário',
+                  labelStyle: TextStyle(color: blackColor),
                   filled: true,
                   fillColor: backgroundColor,
                 ),
@@ -48,6 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: _passwordController,
                 decoration: InputDecoration(
                   labelText: 'Senha',
+                  labelStyle: TextStyle(color: blackColor),
                   filled: true,
                   fillColor: backgroundColor,
                 ),
@@ -58,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: _login,
                 style:
                     ElevatedButton.styleFrom(backgroundColor: secondaryColor),
-                child: Text('Login'),
+                child: Text('Login', style: TextStyle(color: blackColor)),
               ),
             ],
           ),

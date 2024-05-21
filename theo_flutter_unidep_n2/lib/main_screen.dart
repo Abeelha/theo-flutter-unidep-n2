@@ -9,8 +9,9 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Clínica Médica'),
-        backgroundColor: Color.fromARGB(255, 168, 138, 213),
+        title: Text('Clínica Médica', style: TextStyle(color: blackColor)),
+        backgroundColor: primaryColor,
+        iconTheme: IconThemeData(color: blackColor),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -19,7 +20,7 @@ class MainScreen extends StatelessWidget {
           children: [
             MenuButton(
               title: 'Agendamento de Consultas',
-              color: Color(0xFF57A6A1),
+              color: tertiaryColor,
               onTap: () {
                 Navigator.push(
                   context,
@@ -30,7 +31,7 @@ class MainScreen extends StatelessWidget {
             SizedBox(height: 20),
             MenuButton(
               title: 'Histórico de Pacientes',
-              color: Color(0xFF57A6A1),
+              color: quaternaryColor,
               onTap: () {
                 Navigator.push(
                   context,
@@ -42,7 +43,7 @@ class MainScreen extends StatelessWidget {
             SizedBox(height: 20),
             MenuButton(
               title: 'Perfil do Médico',
-              color: Color(0xFF57A6A1),
+              color: secondaryColor,
               onTap: () {
                 Navigator.push(
                   context,
@@ -73,7 +74,7 @@ class MenuButton extends StatelessWidget {
         backgroundColor: color,
         minimumSize: Size(double.infinity, 60),
       ),
-      child: Text(title, style: TextStyle(fontSize: 18)),
+      child: Text(title, style: TextStyle(fontSize: 18, color: blackColor)),
     );
   }
 }
