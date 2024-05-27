@@ -11,9 +11,9 @@ class PatientHistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Histórico de Pacientes', style: TextStyle(color: blackColor)),
+        title: Text('Histórico de Pacientes', style: TextStyle(color: color1)),
         backgroundColor: primaryColor,
-        iconTheme: IconThemeData(color: blackColor),
+        iconTheme: IconThemeData(color: color1),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

@@ -12,7 +12,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Clínica Médica', style: TextStyle(color: blackColor)),
+        title: Text('Clínica Médica', style: TextStyle(color: color1)),
         backgroundColor: primaryColor,
         iconTheme: IconThemeData(color: blackColor),
       ),
@@ -38,7 +38,8 @@ class MainScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PatientHistoryScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => PatientHistoryScreen()),
                 );
               },
             ),
@@ -49,7 +50,8 @@ class MainScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DoctorProfileScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => DoctorProfileScreen()),
                 );
               },
             ),

@@ -13,7 +13,8 @@ class DoctorProfileScreen extends StatefulWidget {
 
 class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
   final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _specializationController = TextEditingController();
+  final TextEditingController _specializationController =
+      TextEditingController();
   final TextEditingController _contactController = TextEditingController();
 
   // Método para adicionar um perfil de médico
@@ -36,9 +37,9 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil do Médico', style: TextStyle(color: blackColor)),
+        title: Text('Perfil do Médico', style: TextStyle(color: color1)),
         backgroundColor: primaryColor,
-        iconTheme: IconThemeData(color: blackColor),
+        iconTheme: IconThemeData(color: color1),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -77,7 +78,7 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
             ElevatedButton(
               onPressed: _addDoctor,
               style: ElevatedButton.styleFrom(backgroundColor: secondaryColor),
-              child: Text('Adicionar Médico', style: TextStyle(color: blackColor)),
+              child: Text('Adicionar Médico', style: TextStyle(color: color1)),
             ),
             Expanded(
               child: Consumer<AppState>(
@@ -87,12 +88,15 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
                     itemBuilder: (context, index) {
                       final doctor = appState.doctors[index];
                       return ListTile(
-                        title: Text(doctor['name']!, style: TextStyle(color: blackColor)),
+                        title: Text(doctor['name']!,
+                            style: TextStyle(color: blackColor)),
                         subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Especialização: ${doctor['specialization']}', style: TextStyle(color: blackColor)),
-                            Text('Contato: ${doctor['contact']}', style: TextStyle(color: blackColor)),
+                            Text('Especialização: ${doctor['specialization']}',
+                                style: TextStyle(color: blackColor)),
+                            Text('Contato: ${doctor['contact']}',
+                                style: TextStyle(color: blackColor)),
                           ],
                         ),
                         trailing: IconButton(

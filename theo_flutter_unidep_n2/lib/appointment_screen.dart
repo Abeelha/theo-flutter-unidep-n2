@@ -48,9 +48,9 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agendamento de Consultas', style: TextStyle(color: blackColor)),
+        title: Text('Agendamento de Consultas', style: TextStyle(color: color1)),
         backgroundColor: primaryColor,
-        iconTheme: IconThemeData(color: blackColor),
+        iconTheme: IconThemeData(color: color1),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -79,7 +79,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
             ElevatedButton(
               onPressed: _addAppointment,
               style: ElevatedButton.styleFrom(backgroundColor: secondaryColor),
-              child: Text('Adicionar Consulta', style: TextStyle(color: blackColor)),
+              child: Text('Adicionar Consulta', style: TextStyle(color: color1)),
             ),
             Expanded(
               child: Consumer<AppState>(
