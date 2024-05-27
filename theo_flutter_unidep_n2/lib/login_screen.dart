@@ -1,3 +1,6 @@
+// Este arquivo define a tela de login, onde os usuários podem inserir suas credenciais
+// para acessar o aplicativo.
+
 import 'package:flutter/material.dart';
 import 'main_screen.dart';
 import 'constants.dart';
@@ -11,6 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  // Método para realizar login
   void _login() {
     if (_usernameController.text == 'admin' && _passwordController.text == 'admin') {
       Navigator.pushReplacement(

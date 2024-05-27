@@ -1,3 +1,6 @@
+// Este arquivo define a tela de agendamento de consultas, onde os usuários podem adicionar,
+// visualizar e remover agendamentos.
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app_state.dart';
@@ -12,6 +15,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   final TextEditingController _appointmentController = TextEditingController();
   DateTime? _selectedDate;
 
+  // Método para selecionar uma data usando um date picker
   Future<void> _pickDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -26,6 +30,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
     }
   }
 
+  // Método para adicionar um agendamento
   void _addAppointment() {
     if (_appointmentController.text.isNotEmpty && _selectedDate != null) {
       Provider.of<AppState>(context, listen: false).addAppointment(

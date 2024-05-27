@@ -1,3 +1,6 @@
+// Este arquivo define a tela de histórico de pacientes, onde os usuários podem visualizar
+// os agendamentos de consultas passados.
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app_state.dart';

@@ -1,3 +1,6 @@
+// Este arquivo define a tela de perfil do médico, onde os usuários podem adicionar,
+// visualizar e remover perfis de médicos.
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app_state.dart';
@@ -13,6 +16,7 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
   final TextEditingController _specializationController = TextEditingController();
   final TextEditingController _contactController = TextEditingController();
 
+  // Método para adicionar um perfil de médico
   void _addDoctor() {
     if (_nameController.text.isNotEmpty &&
         _specializationController.text.isNotEmpty &&

@@ -1,3 +1,6 @@
+// Este arquivo define a tela principal do aplicativo, onde os usuários podem navegar
+// para as telas de agendamento, histórico de pacientes e perfil do médico.
+
 import 'package:flutter/material.dart';
 import 'appointment_screen.dart';
 import 'patient_history_screen.dart';
@@ -57,6 +60,7 @@ class MainScreen extends StatelessWidget {
   }
 }
 
+// Widget personalizado para criar botões de menu na tela principal
 class MenuButton extends StatelessWidget {
   final String title;
   final Color color;
