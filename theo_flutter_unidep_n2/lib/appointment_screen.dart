@@ -12,7 +12,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   final TextEditingController _appointmentController = TextEditingController();
   DateTime? _selectedDate;
 
-  void _pickDate(BuildContext context) async {
+  Future<void> _pickDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
@@ -43,8 +43,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agendamento de Consultas',
-            style: TextStyle(color: blackColor)),
+        title: Text('Agendamento de Consultas', style: TextStyle(color: blackColor)),
         backgroundColor: primaryColor,
         iconTheme: IconThemeData(color: blackColor),
       ),
@@ -75,8 +74,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
             ElevatedButton(
               onPressed: _addAppointment,
               style: ElevatedButton.styleFrom(backgroundColor: secondaryColor),
-              child: Text('Adicionar Consulta',
-                  style: TextStyle(color: blackColor)),
+              child: Text('Adicionar Consulta', style: TextStyle(color: blackColor)),
             ),
             Expanded(
               child: Consumer<AppState>(
@@ -86,10 +84,8 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     itemBuilder: (context, index) {
                       final appointment = appState.appointments[index];
                       return ListTile(
-                        title: Text(appointment['description'],
-                            style: TextStyle(color: blackColor)),
-                        subtitle: Text(appointment['dateTime'].toString(),
-                            style: TextStyle(color: blackColor)),
+                        title: Text(appointment['description'], style: TextStyle(color: blackColor)),
+                        subtitle: Text(appointment['dateTime'].toString(), style: TextStyle(color: blackColor)),
                         trailing: IconButton(
                           icon: Icon(Icons.delete, color: blackColor),
                           onPressed: () => appState.removeAppointment(index),

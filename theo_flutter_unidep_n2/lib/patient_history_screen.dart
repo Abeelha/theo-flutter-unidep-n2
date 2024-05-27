@@ -8,8 +8,7 @@ class PatientHistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:
-            Text('Histórico de Pacientes', style: TextStyle(color: blackColor)),
+        title: Text('Histórico de Pacientes', style: TextStyle(color: blackColor)),
         backgroundColor: primaryColor,
         iconTheme: IconThemeData(color: blackColor),
       ),
@@ -22,10 +21,8 @@ class PatientHistoryScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final appointment = appState.appointments[index];
                 return ListTile(
-                  title: Text(appointment['description'],
-                      style: TextStyle(color: blackColor)),
-                  subtitle: Text(appointment['dateTime'].toString(),
-                      style: TextStyle(color: blackColor)),
+                  title: Text(appointment['description'], style: TextStyle(color: blackColor)),
+                  subtitle: Text(appointment['dateTime'].toString(), style: TextStyle(color: blackColor)),
                 );
               },
             );

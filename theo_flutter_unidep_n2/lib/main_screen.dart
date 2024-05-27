@@ -35,8 +35,7 @@ class MainScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => PatientHistoryScreen()),
+                  MaterialPageRoute(builder: (context) => PatientHistoryScreen()),
                 );
               },
             ),
@@ -47,8 +46,7 @@ class MainScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => DoctorProfileScreen()),
+                  MaterialPageRoute(builder: (context) => DoctorProfileScreen()),
                 );
               },
             ),

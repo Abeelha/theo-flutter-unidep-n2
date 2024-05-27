@@ -12,8 +12,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _passwordController = TextEditingController();
 
   void _login() {
-    if (_usernameController.text == 'admin' &&
-        _passwordController.text == 'admin') {
+    if (_usernameController.text == 'admin' && _passwordController.text == 'admin') {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => MainScreen()),
@@ -58,8 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _login,
-                style:
-                    ElevatedButton.styleFrom(backgroundColor: secondaryColor),
+                style: ElevatedButton.styleFrom(backgroundColor: secondaryColor),
                 child: Text('Login', style: TextStyle(color: blackColor)),
               ),
             ],

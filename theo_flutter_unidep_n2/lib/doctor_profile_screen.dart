@@ -10,8 +10,7 @@ class DoctorProfileScreen extends StatefulWidget {
 
 class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
   final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _specializationController =
-      TextEditingController();
+  final TextEditingController _specializationController = TextEditingController();
   final TextEditingController _contactController = TextEditingController();
 
   void _addDoctor() {
@@ -74,8 +73,7 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
             ElevatedButton(
               onPressed: _addDoctor,
               style: ElevatedButton.styleFrom(backgroundColor: secondaryColor),
-              child:
-                  Text('Adicionar Médico', style: TextStyle(color: blackColor)),
+              child: Text('Adicionar Médico', style: TextStyle(color: blackColor)),
             ),
             Expanded(
               child: Consumer<AppState>(
@@ -85,15 +83,12 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
                     itemBuilder: (context, index) {
                       final doctor = appState.doctors[index];
                       return ListTile(
-                        title: Text(doctor['name']!,
-                            style: TextStyle(color: blackColor)),
+                        title: Text(doctor['name']!, style: TextStyle(color: blackColor)),
                         subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Especialização: ${doctor['specialization']}',
-                                style: TextStyle(color: blackColor)),
-                            Text('Contato: ${doctor['contact']}',
-                                style: TextStyle(color: blackColor)),
+                            Text('Especialização: ${doctor['specialization']}', style: TextStyle(color: blackColor)),
+                            Text('Contato: ${doctor['contact']}', style: TextStyle(color: blackColor)),
                           ],
                         ),
                         trailing: IconButton(

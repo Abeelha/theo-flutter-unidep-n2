@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppState extends ChangeNotifier {
-  List<Map<String, dynamic>> _appointments = [];
-  List<Map<String, String>> _doctors = [
+  final List<Map<String, dynamic>> _appointments = [];
+  final List<Map<String, String>> _doctors = [
     {
       'name': 'Dr. João Silva',
       'specialization': 'Cardiologia',
